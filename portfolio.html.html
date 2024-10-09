@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>👩‍💻Kumud Tyagi Portfolio</title>
+    <style>
+        /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fdfdfd;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none; 
+    border: none !important;
+    background: none !important; /* If there's a background color, remove it */
+    box-shadow: none !important;
+}
+
+
+
+.logo {
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: rgb(189, 70, 31);
+    size: 2rem;
+}  
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-left: 110px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+        color: rgb(165, 61, 26);
+        transition:color 0.3s ease ;
+        font-size: 1.01rem;
+}
+
+#element {
+        color: rgb(211, 76, 35);
+        font-size:2.3rem;
+      }
+
+.contact-btn {
+    background-color: #f4f4f4;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Home Section */
+.home-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px; /* Adjust padding for fixed nav */
+    text-align: center;
+}
+
+.intro-image img {
+    border-radius: 50%;
+    width: 155px;
+    height: 175px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    margin-top: -80px;
+    margin-left: -35px;
+    
+}
+
+.intro-text h2 {
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+}
+
+.intro-text h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-me-btn {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: #fff;
+    margin-left: 400px;
+}
+
+.contact-me-btn:hover {
+    background: linear-gradient(90deg, #ffffff, #fbfbfb); /* Hover effect with gradient change */
+    transform: scale(1.05);
+    color: #333;
+    border: 1px solid #feb47b;
+
+}
+
+.resume-btn {
+    background-color: #fff;
+    border: 1px solid #feb47b;
+    color: #333;
+}
+
+.resume-btn:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+    color: #fff;
+}
+/* Theme toggle button */
+.right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:focus {
+    outline: none;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+body.dark-mode header {
+    background-color: #050505; /* Dark gray background for the navbar */
+    transition: background-color 0.3s ease;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
+}
+
+body.dark-mode .nav-links li a {
+    color: #ffffff; /* Change to white for visibility */
+    transition: color 0.3s ease;
+}
+
+
+body.dark-mode .logo {
+    color: #ffffff; /* Ensure logo is white in dark mode */
+}
+
+body.dark-mode .contact-me-btn,
+body.dark-mode .resume-btn {
+    background-color: #1e1e1e;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+body.dark-mode .contact-me-btn:hover,
+body.dark-mode .resume-btn:hover {
+    background-color: #333;
+    border-color: #ff7e5f;
+    color: #fff;
+}
+
+body.dark-mode .contact-me-btn:hover {
+    background-color: #1e1e1e; /* Orange background on hover */
+    color: #000000; /* White text color on hover */
+    border: 1px solid #ff6600; /* Orange border to match */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+body.dark-mode .contact-me-btn {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Dark text */
+    border: 1px solid #ffffff; /* White border */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+
+/* Light mode styles (default) */
+body.light-mode {
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+header.light-mode {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+body.light-mode .nav-links li a {
+    color: #333;
+}
+body.light-mode .logo {
+    color: #333;
+}
+.nav-links li a:hover {
+    color: #ff7e5f;
+}
+header.light-mode {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+  }
+
+  .dark-mode body {
+    background-color: #000000; /* Dark mode background */
+}
+
+        .about-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f2ece9;
+        }
+
+        .dark-mode .about-section {
+    background-color: #000000; /* Dark mode section background */
+}
+
+        .about-section h3 {
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .dark-mode .about-section h3 {
+    color: #ffffff; /* Dark mode color */
+}
+
+        .about-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #e0853f;
+        }
+
+        .dark-mode .about-section h1 {
+    color: #ffb37d; /* Dark mode heading color */
+}
+
+        .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-image img {
+            width: 450px;
+            height: 490px;
+            
+            margin-top:-50px;
+            border-radius: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+            margin-left: -40px;
+        }
+
+        .dark-mode .about-image img {
+    box-shadow: 0 4px 10px rgba(194, 87, 0, 0.998); /* Dark mode lighter shadow */
+}
+
+        .about-info {
+            max-width: 600px;
+        }
+
+
+
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 300px;
+            transition: all 0.5s ease;
+        }
+
+        .dark-mode .info-box {
+    background: #000000; /* Dark mode box background */
+    box-shadow: 0 2px 8px rgb(111, 111, 111); /* Dark mode shadow */
+}
+
+        .info-box:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.563);
+            transform: translateX(-10px);
+            transform: translateY(-10px);
+        }
+
+        .dark-mode .info-box:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15); /* Dark mode hover shadow */
+}
+
+        .info-box h2 {
+            margin-bottom: -40px;
+            font-size: 25px;
+            color: #ff7a00;
+        }
+
+        .dark-mode .info-box h2 {
+    color: #f69b56; /* Dark mode heading color */
+}
+
+
+        .info-box p {
+            color: #262525;
+            font-size: 16px;
+            line-height: 1.8;
+            
+        }
+.dark-mode .info-box p{
+    color:white;
+}
+
+        
+
+
+        /* Media Query for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-info {
+                display: flex;
+                flex-direction: row; /* Aligns items horizontally */
+                justify-content: space-between; /* Distributes space evenly */
+                flex-wrap: wrap; /* Allows wrapping on smaller screens */
+                 gap: 20px;  /* Adds spacing between info-boxes */
+
+            }
+
+            .info-box {
+                flex: 1 1 calc(33.33% - 20px); /* Flex-grow, flex-shrink, and width calculation to fit three boxes */
+                flex-direction: row;
+                min-width: 250px; /* Ensures the boxes don't get too small on smaller screens */
+                 box-sizing: border-box;
+            }
+        }
+
+            .info-box img {
+               width: 40px; /* Adjusted the width */
+               height: 40px; /* Adjusted the height */
+               object-fit: cover; /* Ensures that the image fits properly */
+               margin-bottom: -30px; /* Optional: Space below the image */
+               margin-left: 110px;
+        }
+
+        
+
+.tools {
+    margin-top: 20px;
+}
+
+.tools h2 {
+    margin-bottom: 15px;
+    color: #fca311;
+}
+
+.tools ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.tools ul li {
+    margin-right: 15px;
+}
+
+.tools ul li img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #0A001F;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #0A001F;
+}
+
+.dark-mode a {
+    color: #fca311;
+}
+
+.light-mode a {
+    color: #0A001F;
+}
+
+/* Services Section */
+.services-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fcf7f4;
+}
+
+.dark-mode .services-section {
+    background-color: #000000; /* Dark mode background */
+}
+
+.services-section h3 {
+    color: #2a2929;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.dark-mode .services-section h3 {
+    color: #f9f1f1; /* Dark mode subtitle color */
+}
+
+.services-section h1 {
+    color: #e0853f;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.dark-mode .services-section h1 {
+    color: #ffb37d; /* Dark mode heading color */
+}
+
+.services-section p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.dark-mode .services-section p {
+    color: #fcf7f7; /* Dark mode paragraph color */
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .service-card {
+    background-color: #000000; /* Dark mode card background */
+    box-shadow: 0 4px 10px rgb(121, 119, 119); /* Lighter shadow for dark mode */
+}
+
+.service-card:hover {
+    transform: translateX(-10px);
+    transform: translateY(-10px);
+}
+
+.service-icon img {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ea9f69;
+}
+
+.dark-mode .service-card h3 {
+    color: #ea9f69; /* Dark mode card title color */
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.dark-mode .service-card p {
+    color: #bbbbbb; /* Dark mode card text color */
+}
+
+.service-card a {
+    color: #007BFF;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.dark-mode .service-card a {
+    color: #80aaff; /* Dark mode link color */
+}
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+
+.portfolio {
+    padding: 50px;
+    text-align: center;
+    background-color: #f2ece9;
+    rgb(236, 226, 219);
+}
+
+.dark-mode .portfolio {
+    background-color: #0c0c0c; /* Dark mode background */
+}
+
+.portfolio h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #da925a;
+    #e57635;
+}
+
+.dark-mode .portfolio h2 {
+    color: #ffb37d;  /* Dark mode heading color */
+}
+
+
+.portfolio p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #010101;
+}
+
+.dark-mode .portfolio p {
+    color: #ede9e6; /* Dark mode paragraph color */
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+.project-card {
+    width: 300px;
+    background-color: rgb(245, 242, 239);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.245);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .project-card {
+    background-color: #000000; /* Dark mode card background */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark mode */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+}
+
+.project-card img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+    box-shadow: white;
+}
+
+.project-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #dc8f54;;
+}
+
+.dark-mode .project-info h3 {
+    color: r#ffb37d;  /* Dark mode project title color */
+}
+
+.project-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #212020;
+}
+
+.dark-mode .project-info p {
+    color: rgb(253, 217, 206) /* Dark mode project description color */
+}
+
+.icon {
+    font-size: 24px;
+    color: #333;
+}
+
+.dark-mode .icon {
+    color: #fff; /* Dark mode icon color */
+}
+
+.show-more {
+    margin-top: 50px;
+    padding: 15px 30px;
+    border: none;
+    background-color: rgb(219, 192, 175);
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .show-more {
+    background-color: #131313;
+    border: 1px solid #ffffff;
+    color: white;
+}
+
+.show-more:hover {
+    background-color:rgba(211, 144, 105, 0.982);
+}
+
+.dark-mode .show-more:hover {
+    background-color: #222222; /* Dark mode button hover color */
+    border-color: rgb(141, 141, 141);
+}
+
+
+.show-more span {
+    font-size: 18px;
+    color: #3a3737;
+}
+
+.dark-mode .show-more span {
+    color: #fff; /* Dark mode button text color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contact-section {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 206, 195);
+    height: 100vh;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    background-color: #efe5de;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h3 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #363535;
+    margin-bottom: 5px;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #161616;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #181717;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.input-row input {
+    width: 48%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    outline: none;
+    resize: none;
+}
+
+.captcha-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+}
+
+.captcha-box img {
+    height: 40px;
+    width: auto;
+}
+
+.submit-btn {
+    padding: 15px;
+    background-color:rgb(219, 192, 175);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    width: 40%;
+    margin-left:150px;
+    border: 1px solid #ffffff;
+}
+
+.submit-btn:hover {
+    background-color:rgba(211, 144, 105, 0.982);
+    color: rgb(0, 0, 0);
+}
+
+.submit-btn span {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Dark mode styling */
+body.dark-mode .contact-section {
+    background-color: #000000;
+}
+
+body.dark-mode .contact-container {
+    background-color: #000000;
+    box-shadow: 0 4px 15px rgb(79, 79, 79);
+}
+
+body.dark-mode .contact-container h3,
+body.dark-mode .contact-container h1,
+body.dark-mode .contact-container p {
+    color: #ffffff;
+}
+
+body.dark-mode .input-row input,
+body.dark-mode textarea {
+    background-color: #0d0d0d;
+    border: 1px solid #555;
+    color: #fcfcfc;
+}
+
+body.dark-mode .checkbox-container {
+    color: #f0f0f0;
+}
+
+body.dark-mode .submit-btn {
+    background-color: #131313;
+    border: 1px solid #ffffff;
+    color: white;
+}
+
+body.dark-mode .submit-btn:hover {
+    background-color: #555;
+}
+
+/* Reset some basic styles */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #fff; 
+   transition: background-color 0.3s ease;
+}
+
+.dark-mode footer {
+    background-color: #000000; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #000; 
+    transition: color 0.3s ease;
+}
+
+.footer-content h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #333;
+    margin-left: 50px;
+}
+
+.dark-mode .logo {
+    color: #fff; 
+}
+
+.dot {
+    color: #9c27b0; 
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.email img {
+    width: 19px;
+    margin-right:7px;
+}
+
+.dark-mode .email a{
+    color: #ffffff; 
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #000000;
+    padding-top: 20px;
+    margin-top: 55px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+.dark-mode .footer-bottom {
+    border-top: 1px solid #ffffff; 
+}
+
+.footer-bottom p {
+    color: #666;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .footer-bottom p {
+    color: #aaa; 
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .social-links a {
+    color: #fff; 
+}
+
+.social-links a:hover {
+    color: #cd7045; 
+
+.dark-mode .social-links a:hover {
+    color: #cd7045;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kumud<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+            <div class="right-buttons">
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <button class="contact-btn">Contact <span>↗</span></button>
+            </div>
+            
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="intro">
+            <div class="intro-image">
+                <img src="kumt.png" alt="Yash Tyagi">
+            </div>
+            <div class="intro-text">
+                <h2>Hi! I'm <span class="orange">Kumud Tyagi 👋</span></h2>
+                <h1>I'm a passionate <br>
+                <span id="element"></span>
+                based in India.</h1>
+                <p>I am a Machine Learning developer, currently doing my bachelor in technology with artificial intelligence and machine learning.</p>
+                <div class="btn-group">
+                    <a href="#contact" class="btn contact-me-btn">contact me</a>
+                    <a href="resume.pdf" class="btn resume-btn">my resume <span>⬇</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h3>Introduction</h3>
+        <h1>About me</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="kt.png" alt="Yash"> <!-- Replace with the image path -->
+            </div>
+            <div class="about-info">
+                <div class="info-box">
+                    <img src="code.png" alt="">
+                    <h2>Languages</h2>
+                    <p>HTML, CSS, JavaScript, React Js, Next Js</p>
+                </div>
+                <div class="info-box">
+                    <img src="graduation.png" alt="">
+                    <h2>Education</h2>
+                    <p>B.Tech in Computer Science</p>
+                </div>
+                <div class="info-box">
+                    <img src="suitcase.png" alt="">
+                    <h2>Projects</h2>
+                    <p>Built more than 5 projects</p>
+                </div>
+            </div>
+
+    </section>
+
+    <section id="services" class="services-section">
+        <h3>What I offer</h3>
+        <h1>My Services</h1>
+        <p>I am currently persuing my graduation in bachelor of technology and enhancing my expertise in following.</p>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="working.jpg" alt="Web Design">
+                </div>
+                <h3>Web design</h3>
+                <p>Web development is the process of building, programming...</p>
+                <a href="#">Read more →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="mobile.jpg" alt="Mobile App">
+                </div>
+                <h3>Mobile app</h3>
+                <p>A mobile app is a software application designed for smartphones...</p>
+                <a href="#">Read more →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="ui-ux.jpg" alt="UI/UX Design">
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>UI design focuses on the visual appeal and interface, while UX design ensures a smooth, intuitive user experience.</p>
+                <a href="#">Read more →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="graphic.jpg" alt="Graphics Design">
+                </div>
+                <h3>Graphics design</h3>
+                <p>Graphic design is the art of creating visual content to communicate messages through typography, imagery, and color.</p>
+                <a href="#">Read more →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="portfolio">
+        <h2>My latest work</h2>
+        <p>Welcome to my portfolio! Explore a collection of projects,showcasing my expertise in.</p>
+
+        <div class="projects">
+            <div class="project-card">
+                <img src="front.jpg" alt="Frontend Project">
+                <div class="project-info">
+                    <h3>Frontend Project</h3>
+                    <p>Web Design</p>
+                    <span class="icon">➔</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="geo.jpg" alt="Geo Based App">
+                <div class="project-info">
+                    <h3>Geo Based App</h3>
+                    <p>Mobile App</p>
+                    <span class="icon">➔</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="machine.jpg" alt="ML projects">
+                <div class="project-info">
+                    <h3>ML projects</h3>
+                    <p>ML prediction</p>
+                    <span class="icon">➔</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="ai soft.jpg" alt="AI Softwares">
+                <div class="project-info">
+                    <h3>AI Softwares</h3>
+                    <p>still working on</p>
+                    <span class="icon">➔</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="show-more">Show more <span>➔</span></button>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h3>Connect with me</h3>
+            <h1>Get in touch</h1>
+            <p>I'd love to hear from you! If you have any questions, comments, or feedback, please use the form below.</p>
+            
+            <form class="contact-form">
+                <div class="input-row">
+                    <input type="text" placeholder="Enter your name" required>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <textarea placeholder="Enter your message" required></textarea>
+                <div class="captcha-row">
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span>I am human</span>
+                    </label>
+                    
+                </div>
+                <button type="submit" class="submit-btn">Submit now <span>➔</span></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2 class="logo">Kumud<span class="dot">.</span></h2>
+                <div class="email">
+                    <img src="gmail.png" alt="email icon" class="email-icon"> <!-- Replace with your email icon -->
+                    <a href="mailto:tyagikumud27@gmail.com">tyagikumud27@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 Kumud Tyagi. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+    
+        // Default mode is light
+        let darkMode = false;
+    
+        themeToggle.addEventListener('click', function() {
+            darkMode = !darkMode;
+            
+            if (darkMode) {
+                body.classList.add('dark-mode');
+                body.classList.remove('light-mode');
+                themeToggle.textContent = '☀️'; // Switch to light mode icon
+            } else {
+                body.classList.add('light-mode');
+                body.classList.remove('dark-mode');
+                themeToggle.textContent = '🌙'; // Switch to dark mode icon
+            }
+        });
+    
+        // Initial mode setup
+        body.classList.add('light-mode'); // Default mode
+    </script>
+    <script>
+        var typed = new Typed("#element", {
+        strings: [
+          "Software Developer",
+          "Full-stack web developer",
+          "Web Designer",
+          "Video Editor",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+</body>
+</html>
