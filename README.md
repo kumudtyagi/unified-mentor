@@ -1,1 +1,2 @@
-The projects i have made while doing internship in Front-end developement course at unified mentor
+The Web portfolio made as a project during 1- month internship at unified mentor
+
